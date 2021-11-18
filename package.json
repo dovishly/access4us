@@ -1,0 +1,18 @@
+{
+  "name": "access4us",
+  "version": "1.0.0",
+  "description": "an idea",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stendur/access4us.git"
+  },
+  "author": "Steven Piccirelli",
+  "bugs": {
+    "url": "https://github.com/stendur/access4us/issues"
+  },
+  "homepage": "https://github.com/stendur/access4us#readme"
+}
