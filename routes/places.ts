@@ -5,8 +5,8 @@ var router = express.Router();
 
 router.get('/', controller.textSearchPlace)
 
-router.get('/about', function (req, res) {
-    res.send('About this wiki');
-})
+router.post('/like', controller.likeAPlace)
+
+router.post('/createATag', controller.createATag)
 
 export = router
