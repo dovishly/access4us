@@ -1,5 +1,6 @@
 import {Client} from "@googlemaps/google-maps-services-js";
-import Place from "../tempClasses/place";
+import { Place }  from "../tempClasses/place";
+import dbClient from '../db/connection'
 
 require('dotenv').config()
 const key = process.env.GOOGLE_API_KEY
@@ -24,6 +25,14 @@ exports.textSearchPlace = function(req, res) {
             console.log(value.name)
             console.log(value.place_id)
         })
+
+        const db = dbClient.db();
+        const collection = db.collection('test');
+        const insertResult = collection.insertOne({name: r.data.results[0].name})
+        .catch(error => {
+            console.log(error);
+        })
+        
         res.sendStatus(200);
     })
     .catch((e) => {

@@ -1,4 +1,4 @@
-class Place{
+export class Place{
     placeId: string
     tagMap: Map<string, number>
 
@@ -18,5 +18,3 @@ class Place{
         return this.tagMap.get(tag);
     }
 }
-
-export = Place
